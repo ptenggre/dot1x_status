@@ -1,0 +1,12 @@
+devices:                # all device definition goes under devices block
+  asw01:           # start a device definition with its HOSTNAME
+    type: switch
+    os: iosxe           # this tells the engine what type of OS its connected to
+    credentials:
+        default:                         # login credentials
+            username: demo
+            password: demo
+    connections:        # give the block on how to connect to its mgmt interface
+      mgmt:
+        protocol: ssh
+        ip: 192.168.85.241
